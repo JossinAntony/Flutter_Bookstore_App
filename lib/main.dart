@@ -115,7 +115,7 @@ class MyApp extends StatelessWidget {
                     height: 60.0,
                     width: 600.0,
                     decoration: BoxDecoration(
-                      color: Colors.blueAccent,
+                      color: Colors.lightGreen,
                       borderRadius: BorderRadius.circular(60.0),
                     ),
                     child: Center(
