@@ -96,7 +96,7 @@ class MyApp extends StatelessWidget {
                   ),
 
                   SizedBox(height: 14.0),
-
+                  /*
                   RaisedButton(
                     onPressed: (){
                       var bookTitle = bookTitleCntrlr.text;
@@ -110,6 +110,22 @@ class MyApp extends StatelessWidget {
                     color:  Colors.cyan,
                     child: Text('Save'),
                   )
+                  */
+                  Container(
+                    height: 60.0,
+                    width: 600.0,
+                    decoration: BoxDecoration(
+                      color: Colors.blueAccent,
+                      borderRadius: BorderRadius.circular(60.0),
+                    ),
+                    child: Center(
+                      child: Text('Save', style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                        color: Colors.white,
+                      ),),
+                    ),
+                  ),
                 ],
               ),
             ),
