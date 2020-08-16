@@ -6,6 +6,14 @@ import 'package:flutter/material.dart';
 main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
+  TextEditingController bookTitleCntrlr = TextEditingController();
+  TextEditingController bookAuthorCntrlr = TextEditingController();
+  TextEditingController bookDistributorCntrlr = TextEditingController();
+  TextEditingController bookDescriptionCntrlr = TextEditingController();
+  TextEditingController bookPriceCntrlr = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,11 +33,12 @@ class MyApp extends StatelessWidget {
                   SizedBox(height: 14.0),
 
                   TextField(
+                    controller: bookTitleCntrlr,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12.0),
                       ),
-                      hintText: "Enter Book name",
+                      hintText: "Enter Book title",
                       prefixIcon: Icon(Icons.book),
                     ),
                   ),
@@ -37,6 +46,7 @@ class MyApp extends StatelessWidget {
                   SizedBox(height: 14.0),
 
                   TextField(
+                    controller: bookAuthorCntrlr,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12.0),
@@ -49,6 +59,7 @@ class MyApp extends StatelessWidget {
                   SizedBox(height: 14.0),
 
                   TextField(
+                      controller: bookDistributorCntrlr,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12.0),
@@ -61,6 +72,7 @@ class MyApp extends StatelessWidget {
                   SizedBox(height: 14.0),
 
                   TextField(
+                      controller: bookDescriptionCntrlr,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12.0),
@@ -73,6 +85,7 @@ class MyApp extends StatelessWidget {
                   SizedBox(height: 14.0),
 
                   TextField(
+                      controller: bookPriceCntrlr,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12.0),
@@ -85,7 +98,15 @@ class MyApp extends StatelessWidget {
                   SizedBox(height: 14.0),
 
                   RaisedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      var bookTitle = bookTitleCntrlr.text;
+                      var bookAuthor = bookAuthorCntrlr.text;
+                      var bookDistributor = bookDistributorCntrlr.text;
+                      var bookDescription = bookDescriptionCntrlr.text;
+                      var bookPrice = bookPriceCntrlr.text;
+
+                      print(bookTitle + ', ' + bookAuthor + ', ' + bookDistributor + ', ' + bookDescription + ', ' + bookPrice);
+                    },
                     color:  Colors.cyan,
                     child: Text('Save'),
                   )
