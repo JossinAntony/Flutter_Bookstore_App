@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bookstore_app/pages/menupage.dart';
 
 import 'addBooks.dart';
 
@@ -127,7 +128,7 @@ class _LogInState extends State<LogIn> {
                                 setState(() {
                                   _visibility = !_checkCredentials(unameCntrlr.text, pwdCntrlr.text);
                                   if(!_visibility){
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => AddBooks()));
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => Menu()));
                                   }
                                 });
                               },
