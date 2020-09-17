@@ -11,14 +11,7 @@ class AddBooks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('Add Books', style: TextStyle(
-              fontWeight: FontWeight.bold,
-            )),
-          ),
-          body: SizedBox.expand(
+    return SizedBox.expand(
             child: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
@@ -139,8 +132,6 @@ class AddBooks extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-        )
-    );
+          );
   }
 }
