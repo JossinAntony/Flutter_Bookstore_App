@@ -25,7 +25,7 @@ class SearchBooks extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25),
                       ),
                       prefixIcon: Icon(Icons.search),
-                      hintText: 'Enter the book name here',
+                      hintText: 'Enter the book title to search',
                       hintStyle: TextStyle(
                         color: Colors.white60,
                       )

@@ -25,7 +25,7 @@ class UpdateBooks extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25),
                       ),
                       prefixIcon: Icon(Icons.search),
-                      hintText: 'Enter the book name',
+                      hintText: 'Enter the book title to update',
                       hintStyle: TextStyle(
                         color: Colors.white60,
                       )
