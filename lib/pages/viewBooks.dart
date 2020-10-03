@@ -15,7 +15,10 @@ class _ViewBooksState extends State<ViewBooks> {
           return Card(
             elevation: 5,
             child: ListTile(
+              leading: Icon(Icons.book),
+              trailing: Icon(Icons.delete),
               title: Text(bookArray[index]),
+              subtitle: Text('Author: \n\nDescription: \n\nDistributor: \n\nPrice:' ),
             ),
           );
         });

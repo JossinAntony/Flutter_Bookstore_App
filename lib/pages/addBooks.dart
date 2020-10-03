@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bookstore_app/datamodels/bookmodel.dart';
+import 'package:flutter_bookstore_app/pages/viewBooks.dart';
 
 class AddBooks extends StatelessWidget {
 
@@ -111,19 +113,33 @@ class AddBooks extends StatelessWidget {
                           child: Text('Save'),
                         )
                         */
-                        Container(
-                          height: 60.0,
-                          width: 600.0,
-                          decoration: BoxDecoration(
-                            color: Colors.lightGreen,
-                            borderRadius: BorderRadius.circular(60.0),
-                          ),
-                          child: Center(
-                            child: Text('Save', style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18.0,
-                              color: Colors.white,
-                            ),),
+                        GestureDetector(
+                          onTap: (){
+/*                          var bookTitle = bookTitleCntrlr.text;
+                            var bookAuthor = bookAuthorCntrlr.text;
+                            var bookDistributor = bookDistributorCntrlr.text;
+                            var bookDescription = bookDescriptionCntrlr.text;
+                            var bookPrice = bookPriceCntrlr.text;
+                            print(bookTitle + ', ' + bookAuthor + ', ' + bookDistributor + ', ' + bookDescription + ', ' + bookPrice);
+                            */
+
+                            BookModel book = BookModel(title: bookTitleCntrlr.text, author: bookAuthorCntrlr.text, description: bookDescriptionCntrlr.text, distributor: bookDistributorCntrlr.text, price: double.parse(bookPriceCntrlr.text));
+                            //Navigator.push(context, MaterialPageRoute(builder: (context)=>ViewBooks()));
+                          },
+                          child: Container(
+                            height: 60.0,
+                            width: 600.0,
+                            decoration: BoxDecoration(
+                              color: Colors.lightGreen,
+                              borderRadius: BorderRadius.circular(60.0),
+                            ),
+                            child: Center(
+                              child: Text('Save', style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0,
+                                color: Colors.white,
+                              ),),
+                            ),
                           ),
                         ),
                       ],
