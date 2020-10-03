@@ -3,6 +3,7 @@ import 'package:flutter_bookstore_app/pages/addBooks.dart';
 import 'package:flutter_bookstore_app/pages/searchBooks.dart';
 import 'package:flutter_bookstore_app/pages/updateBooks.dart';
 import 'package:flutter_bookstore_app/pages/deleteBooks.dart';
+import 'package:flutter_bookstore_app/pages/viewBooks.dart';
 
 class Navigation extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class Navigation extends StatefulWidget {
 }
 
 class _NavigationState extends State<Navigation> {
-  final pages = [AddBooks(), SearchBooks(), UpdateBooks(), DeleteBooks()];
+  final pages = [ViewBooks(), AddBooks(), SearchBooks(), UpdateBooks(), DeleteBooks()];
   int _pageIndex = 0;
 
   @override
@@ -33,6 +34,10 @@ class _NavigationState extends State<Navigation> {
             },
             currentIndex: _pageIndex,
             items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.book),
+                title: Text('VIEW BOOKS'),
+              ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.add_circle),
                 title: Text('ADD BOOKS'),
